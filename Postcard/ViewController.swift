@@ -12,6 +12,8 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var messageLabel: UILabel!
 
+    @IBOutlet weak var messageNameLabel: UILabel!
+    
     @IBOutlet weak var enterNameTextField: UITextField!
     
     @IBOutlet weak var enterAMessageTextField: UITextField!
@@ -37,6 +39,11 @@ class ViewController: UIViewController {
         enterAMessageTextField.resignFirstResponder()
         messageLabel.textColor = UIColor.redColor()
         mailButton.setTitle("Mail Sent", forState:UIControlState.Normal)
+        
+        messageNameLabel.hidden = false
+        messageNameLabel.text = enterNameTextField.text
+        messageNameLabel.textColor = UIColor.blueColor()
+        enterNameTextField.text = ""
     }
 
 }

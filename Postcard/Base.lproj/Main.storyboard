@@ -60,6 +60,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9Kw-OO-OjI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="224" y="198" width="80" height="80"/>
+                                </variation>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2X-dU-8uN">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -95,33 +101,38 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="82" width="288" height="98"/>
+                                    <rect key="frame" x="16" y="82" width="288" height="29"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9Kw-OO-OjI">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbp-yl-mm0">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="224" y="198" width="80" height="80"/>
+                                    <rect key="frame" x="16" y="152" width="119" height="21"/>
                                 </variation>
-                            </imageView>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="9Kw-OO-OjI"/>
                                 <exclude reference="Y2X-dU-8uN"/>
                                 <exclude reference="WGm-p6-FaT"/>
                                 <exclude reference="vgB-Se-U5W"/>
                                 <exclude reference="W87-Pa-eAt"/>
-                                <exclude reference="9Kw-OO-OjI"/>
+                                <exclude reference="Hbp-yl-mm0"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="9Kw-OO-OjI"/>
                                 <include reference="Y2X-dU-8uN"/>
                                 <include reference="WGm-p6-FaT"/>
                                 <include reference="vgB-Se-U5W"/>
                                 <include reference="W87-Pa-eAt"/>
-                                <include reference="9Kw-OO-OjI"/>
+                                <include reference="Hbp-yl-mm0"/>
                             </mask>
                         </variation>
                     </view>
@@ -132,6 +143,7 @@
                         <outlet property="enterNameTextField" destination="Y2X-dU-8uN" id="F0g-jo-Cld"/>
                         <outlet property="mailButton" destination="vgB-Se-U5W" id="QYN-Lj-b2T"/>
                         <outlet property="messageLabel" destination="W87-Pa-eAt" id="bFl-zM-mMU"/>
+                        <outlet property="messageNameLabel" destination="Hbp-yl-mm0" id="bkx-mc-rCw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
